@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/details_title"
+        android:padding="16dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:textColor="@android:color/white"
+        android:textSize="32sp"
+        android:text="@string/not_specified"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <RelativeLayout
+                    android:id="@+id/image_group"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:id="@+id/details_image"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"/>
+
+                    <ImageButton
+                        android:id="@+id/favourites_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/details_image"
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="16dp"
+                        android:src="@drawable/ic_not_favorite"
+                        android:background="@android:color/transparent"
+                        android:onClick="toggleFavourite"/>
+
+
+                    <TextView
+                        android:id="@+id/details_release_year"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/favourites_button"
+                        android:layout_toRightOf="@id/details_image"
+                        android:textSize="24sp"
+                        android:text="@string/not_specified"
+                        android:paddingLeft="16dp"
+                        android:paddingBottom="16dp"/>
+
+                    <TextView
+                        android:id="@+id/details_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/details_release_year"
+                        android:layout_toRightOf="@id/details_image"
+                        android:textSize="18sp"
+                        android:text="@string/not_specified"
+                        android:paddingLeft="16dp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/details_overview"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/image_group"
+                    android:text="@string/not_specified"
+                    android:paddingTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/videos_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/details_overview"
+                    android:text="@string/videos_heading"
+                    android:textSize="24sp"
+                    android:paddingTop="16dp"/>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/video_recycler_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@id/videos_heading"
+                    android:paddingTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/reviews_heading"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/video_recycler_view"
+                    android:text="@string/reviews_heading"
+                    android:textSize="24sp"
+                    android:paddingTop="16dp"/>
+
+                <TextView
+                    android:id="@+id/reviews"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/reviews_heading"
+                    android:text="@string/none"
+                    android:paddingTop="16dp"/>
+            </RelativeLayout>
+        </ScrollView>
+</LinearLayout>

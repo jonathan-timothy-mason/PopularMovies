@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Popular Movies</string>
+    <string name="details_title">Movie Details</string>
+    <string name="max_rating_suffix">/10</string>
+    <string name="not_specified">Not Specified</string>
+    <string name="none">None</string>
+    <string name="videos_heading">Trailers</string>
+    <string name="reviews_heading">Reviews</string>
+    <string name="author_decorator">~</string>
+
+    <!-- Spinner entries. -->
+    <string-array name="sort_by_methods">
+        <item>Most Popular</item>
+        <item>Highest Rated</item>
+        <item>Favourites</item>
+    </string-array>
+
+    <!-- Error messages. -->
+    <string name="err_no_favourites">You don\'t have any favourites.</string>
+    <string name="err_no_movie_data">Movie data currently unavailable.</string>
+    <string name="err_no_movies">Movies currently unavailable.</string>
+    <string name="err_no_video_data">Video data currently unavailable.</string>
+    <string name="warn_no_videos">No videos available.</string>
+    <string name="err_no_review_data">Review data currently unavailable.</string>
+    <string name="warn_no_reviews">No reviews available.</string>
+</resources>
